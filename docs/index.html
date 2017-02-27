@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity WebGL Player | SoulRepaer</title>
+    <style>
+    #canvas {
+      position: absolute;
+      margin-left: 35%;
+      margin-top: 5%;
+    }
+     body {
+        -moz-transform: scale(0.7, 0.7); /* Moz-browsers */
+         zoom: 0.7; /* Other non-webkit browsers */
+         zoom: 70%; /* Webkit browsers */
+    }
+    </style>
+  </head>
+  <body>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="1187px" width="720px"></canvas>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/TestHTML.data",
+    codeUrl: "Release/TestHTML.js",
+    memUrl: "Release/TestHTML.mem",
+  };
+</script>
+<script src="Release/UnityLoader.js"></script>
+
+  </body>
+</html>
